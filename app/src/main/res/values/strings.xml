@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">News</string>
+    <string name="search">Search</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="get_start">Get Start</string>
+    <string name="details">Details</string>
+
+    <string name="on_borading_titel_1">Get Latest News around the word</string>
+    <string name="on_boarding_description_1">from US, UK, KSA, and more!</string>
+
+    <string name="on_borading_titel_2">news come from many sources</string>
+    <string name="on_boarding_description_2">CNN, ABC, BBC and more </string>
+
+      <string name="on_borading_titel_3">Subjects from the word</string>
+    <string name="on_boarding_description_3">Food, Science, Space, Sport</string>
+    <string name="news_not_saved">You have not saved news so far !</string>
+    <string name="server_unavailable">Server Unavailable.</string>
+    <string name="internet_unavailable">Internet Unavailable.</string>
+    <string name="unknown_error">Unknown Error.</string>
+    <string name="home">Home</string>
+    <string name="article_deleted">Article Deleted</string>
+    <string name="article_inserted">Article Inserted</string>
+
+
+</resources>
