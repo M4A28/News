@@ -6,7 +6,8 @@ import com.mohmmed.mosa.eg.news.data.local.NewsDAO
 import com.mohmmed.mosa.eg.news.data.local.NewsDatabase
 import com.mohmmed.mosa.eg.news.data.local.NewsTypeConverter
 import com.mohmmed.mosa.eg.news.data.manger.LocalUserMangerImpl
-import com.mohmmed.mosa.eg.news.data.remote.NewsApi
+import com.mohmmed.mosa.eg.news.data.remote.crypto.CryptoApi
+import com.mohmmed.mosa.eg.news.data.remote.news.NewsApi
 import com.mohmmed.mosa.eg.news.data.reposotry.NewsRepositoryImp
 import com.mohmmed.mosa.eg.news.domain.manger.LocalUserManger
 import com.mohmmed.mosa.eg.news.domain.reposotry.NewsRepository
@@ -20,7 +21,8 @@ import com.mohmmed.mosa.eg.news.domain.usecase.news.SearchNewsUseCases
 import com.mohmmed.mosa.eg.news.domain.usecase.news.SelectArticle
 import com.mohmmed.mosa.eg.news.domain.usecase.news.SelectArticles
 import com.mohmmed.mosa.eg.news.domain.usecase.news.UpsertArticle
-import com.mohmmed.mosa.eg.news.util.Constant.BASE_URL
+import com.mohmmed.mosa.eg.news.util.Constant.CRYPTO_BASE_URL
+import com.mohmmed.mosa.eg.news.util.Constant.NEWS_BASE_URL
 import com.mohmmed.mosa.eg.news.util.Constant.NEWS_DB
 import dagger.Module
 import dagger.Provides
@@ -50,13 +52,24 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideNewsApi(): NewsApi{
+    fun provideNewsApi(): NewsApi {
         return Retrofit
             .Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(NEWS_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(NewsApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideCryptoApi(): CryptoApi {
+        return Retrofit
+            .Builder()
+            .baseUrl(CRYPTO_BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(CryptoApi::class.java)
     }
 
     @Provides

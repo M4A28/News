@@ -19,12 +19,11 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.sp
 import androidx.paging.compose.LazyPagingItems
 import com.mohmmed.mosa.eg.news.R
-import com.mohmmed.mosa.eg.news.domain.module.Article
+import com.mohmmed.mosa.eg.news.domain.module.news.Article
 import com.mohmmed.mosa.eg.news.presention.Dimens.MediumPadding0
 import com.mohmmed.mosa.eg.news.presention.Dimens.MediumPadding1
 import com.mohmmed.mosa.eg.news.presention.common.ArticleList
 import com.mohmmed.mosa.eg.news.presention.common.SearchBar
-import com.mohmmed.mosa.eg.news.presention.navfraph.Route
 import com.mohmmed.mosa.eg.news.util.Constant.NEWS_PAGE_SIZE
 
 

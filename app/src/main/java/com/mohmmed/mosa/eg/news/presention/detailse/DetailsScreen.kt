@@ -29,8 +29,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.mohmmed.mosa.eg.news.R
-import com.mohmmed.mosa.eg.news.domain.module.Article
-import com.mohmmed.mosa.eg.news.domain.module.Source
+import com.mohmmed.mosa.eg.news.domain.module.news.Article
+import com.mohmmed.mosa.eg.news.domain.module.news.Source
 import com.mohmmed.mosa.eg.news.presention.Dimens
 import com.mohmmed.mosa.eg.news.presention.Dimens.ArticleImageHeight
 import com.mohmmed.mosa.eg.news.presention.Dimens.MediumPadding1

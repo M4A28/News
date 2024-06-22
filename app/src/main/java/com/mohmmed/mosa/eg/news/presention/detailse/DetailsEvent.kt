@@ -1,6 +1,6 @@
 package com.mohmmed.mosa.eg.news.presention.detailse
 
-import com.mohmmed.mosa.eg.news.domain.module.Article
+import com.mohmmed.mosa.eg.news.domain.module.news.Article
 
 sealed class DetailsEvent {
 

@@ -11,9 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
-import com.mohmmed.mosa.eg.news.domain.module.Article
+import com.mohmmed.mosa.eg.news.domain.module.news.Article
 import com.mohmmed.mosa.eg.news.presention.Dimens.ExtraSmallPadding
-import com.mohmmed.mosa.eg.news.presention.Dimens.ExtraSmallPadding2
 import com.mohmmed.mosa.eg.news.presention.Dimens.MediumPadding1
 
 @Composable

@@ -1,10 +1,9 @@
-package com.mohmmed.mosa.eg.news.domain.module
+package com.mohmmed.mosa.eg.news.domain.module.news
 
 
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.versionedparcelable.VersionedParcelize
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 

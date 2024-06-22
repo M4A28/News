@@ -4,7 +4,8 @@ object Constant {
     const val USER_SETTING = "userSetting"
     const val APP_ENTRY = "appEntry"
     const val API_KEY = "925c4b06c7b647ba80e4972ec13b7e2b"
-    const val BASE_URL = "https://newsapi.org/v2/"
+    const val NEWS_BASE_URL = "https://newsapi.org/v2/"
+    const val CRYPTO_BASE_URL = "https://api.coinlore.net/"
     const val NEWS_DB = "news_db"
     const val NEWS_PAGE_SIZE = 20
     const val ARTICLE_KEY = "Article"

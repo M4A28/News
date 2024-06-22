@@ -14,7 +14,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import com.mohmmed.mosa.eg.news.R
-import com.mohmmed.mosa.eg.news.domain.module.Article
+import com.mohmmed.mosa.eg.news.domain.module.news.Article
 import com.mohmmed.mosa.eg.news.presention.Dimens.MediumPadding0
 import com.mohmmed.mosa.eg.news.presention.Dimens.MediumPadding1
 import com.mohmmed.mosa.eg.news.presention.common.ArticleList

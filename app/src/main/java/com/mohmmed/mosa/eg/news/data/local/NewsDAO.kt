@@ -5,7 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.mohmmed.mosa.eg.news.domain.module.Article
+import com.mohmmed.mosa.eg.news.domain.module.news.Article
 import kotlinx.coroutines.flow.Flow
 
 @Dao

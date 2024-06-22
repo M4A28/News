@@ -21,7 +21,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.mohmmed.mosa.eg.news.R
-import com.mohmmed.mosa.eg.news.domain.module.Article
+import com.mohmmed.mosa.eg.news.domain.module.news.Article
 import com.mohmmed.mosa.eg.news.presention.bookmark.BookmarkScreen
 import com.mohmmed.mosa.eg.news.presention.bookmark.BookmarkViewmodel
 import com.mohmmed.mosa.eg.news.presention.detailse.DetailsEvent
@@ -116,7 +116,7 @@ fun NewsNavigator() {
                 }
                 navController.previousBackStackEntry
                     ?.savedStateHandle
-                    ?.get<Article?>(ARTICLE_KEY)?.let {article ->
+                    ?.get<Article?>(ARTICLE_KEY)?.let { article ->
                         DetailsScreen(
                             article = article,
                             event = viewmodel::onEvent,

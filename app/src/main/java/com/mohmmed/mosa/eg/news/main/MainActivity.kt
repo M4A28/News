@@ -8,16 +8,12 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
-import androidx.lifecycle.lifecycleScope
 import com.mohmmed.mosa.eg.news.data.local.NewsDAO
-import com.mohmmed.mosa.eg.news.domain.module.Article
-import com.mohmmed.mosa.eg.news.domain.module.Source
 import com.mohmmed.mosa.eg.news.presention.navfraph.NavGraph
 import com.mohmmed.mosa.eg.news.ui.theme.NewsTheme
 import com.mohmmed.mosa.eg.news.util.prettyTime
 import com.mohmmed.mosa.eg.news.util.stringToDate
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint

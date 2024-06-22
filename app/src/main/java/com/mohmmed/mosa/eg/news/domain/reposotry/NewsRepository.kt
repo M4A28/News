@@ -1,7 +1,7 @@
 package com.mohmmed.mosa.eg.news.domain.reposotry
 
 import androidx.paging.PagingData
-import com.mohmmed.mosa.eg.news.domain.module.Article
+import com.mohmmed.mosa.eg.news.domain.module.news.Article
 import kotlinx.coroutines.flow.Flow
 
 interface NewsRepository {

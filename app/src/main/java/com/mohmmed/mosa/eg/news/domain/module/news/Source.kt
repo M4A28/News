@@ -1,4 +1,4 @@
-package com.mohmmed.mosa.eg.news.domain.module
+package com.mohmmed.mosa.eg.news.domain.module.news
 
 
 import android.os.Parcel

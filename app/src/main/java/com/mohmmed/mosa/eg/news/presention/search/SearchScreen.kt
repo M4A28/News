@@ -9,11 +9,10 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.mohmmed.mosa.eg.news.domain.module.Article
+import com.mohmmed.mosa.eg.news.domain.module.news.Article
 import com.mohmmed.mosa.eg.news.presention.Dimens.MediumPadding1
 import com.mohmmed.mosa.eg.news.presention.common.ArticleList
 import com.mohmmed.mosa.eg.news.presention.common.SearchBar
-import com.mohmmed.mosa.eg.news.presention.navfraph.Route
 
 
 @Composable

@@ -2,7 +2,7 @@ package com.mohmmed.mosa.eg.news.data.local
 
 import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
-import com.mohmmed.mosa.eg.news.domain.module.Source
+import com.mohmmed.mosa.eg.news.domain.module.news.Source
 
 @ProvidedTypeConverter
 class NewsTypeConverter {
@@ -12,7 +12,7 @@ class NewsTypeConverter {
     }
 
     @TypeConverter
-    fun stringToSource(source: String): Source{
+    fun stringToSource(source: String): Source {
         val data = source.split(",")
         return Source(id = data[0], name = data[1])
     }

@@ -1,6 +1,6 @@
-package com.mohmmed.mosa.eg.news.data.remote
+package com.mohmmed.mosa.eg.news.data.remote.news
 
-import com.mohmmed.mosa.eg.news.data.remote.dto.NewsResponse
+import com.mohmmed.mosa.eg.news.data.remote.news.dto.NewsResponse
 import com.mohmmed.mosa.eg.news.util.Constant.API_KEY
 import retrofit2.http.GET
 import retrofit2.http.Query
