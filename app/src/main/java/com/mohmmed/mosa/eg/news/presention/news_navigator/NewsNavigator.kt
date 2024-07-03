@@ -1,6 +1,7 @@
 package com.mohmmed.mosa.eg.news.presention.news_navigator
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -24,6 +25,7 @@ import com.mohmmed.mosa.eg.news.R
 import com.mohmmed.mosa.eg.news.domain.module.news.Article
 import com.mohmmed.mosa.eg.news.presention.bookmark.BookmarkScreen
 import com.mohmmed.mosa.eg.news.presention.bookmark.BookmarkViewmodel
+import com.mohmmed.mosa.eg.news.presention.crypto.CryptoViewModel
 import com.mohmmed.mosa.eg.news.presention.detailse.DetailsEvent
 import com.mohmmed.mosa.eg.news.presention.detailse.DetailsScreen
 import com.mohmmed.mosa.eg.news.presention.detailse.DetailsViewModel
@@ -44,6 +46,7 @@ fun NewsNavigator() {
         listOf(
             BottomNavigationItem(icon = R.drawable.ic_home, text = R.string.home),
             BottomNavigationItem(icon = R.drawable.ic_search, text = R.string.search),
+            BottomNavigationItem(icon = R.drawable.ic_crypto_currency, text = R.string.crypto),
             BottomNavigationItem(icon = R.drawable.ic_bookmark, text = R.string.bookmark)
         )
     }
@@ -54,7 +57,8 @@ fun NewsNavigator() {
         when (backStackState?.destination?.route) {
             Route.HomeScreen.rout -> 0
             Route.SearchScreen.rout -> 1
-            Route.BookmarkScreen.rout -> 2
+            Route.CryptoScreen.rout -> 2
+            Route.BookmarkScreen.rout -> 3
             else -> 0
         }
     }
@@ -62,6 +66,7 @@ fun NewsNavigator() {
     val showBottomBar = remember(key1 = backStackState) {
         backStackState?.destination?.route == Route.HomeScreen.rout ||
         backStackState?.destination?.route == Route.SearchScreen.rout ||
+        backStackState?.destination?.route == Route.CryptoScreen.rout ||
         backStackState?.destination?.route == Route.BookmarkScreen.rout
 
     }
@@ -76,10 +81,12 @@ fun NewsNavigator() {
                         when(index){
                             0 -> navigateToTab(navController, Route.HomeScreen.rout)
                             1 -> navigateToTab(navController, Route.SearchScreen.rout)
-                            2 -> navigateToTab(navController, Route.BookmarkScreen.rout)
+                            2 -> navigateToTab(navController, Route.CryptoScreen.rout)
+                            3 -> navigateToTab(navController, Route.BookmarkScreen.rout)
                         }
 
-                    })
+                    }
+                )
             }
         }
     ) {
@@ -103,7 +110,7 @@ fun NewsNavigator() {
                 )
             }
 
-            // TODO : Handel sideEffect
+
             composable(route = Route.DetailsScreen.rout){
                 val viewmodel: DetailsViewModel = hiltViewModel()
                 if(viewmodel.sideEffect != null){
@@ -142,7 +149,16 @@ fun NewsNavigator() {
                 } )
 
             }
-
+            composable(route = Route.CryptoScreen.rout){
+                val viewmodel: CryptoViewModel = hiltViewModel()
+                val coins = viewmodel.crypto.collectAsLazyPagingItems()
+                try {
+                    println("${coins.itemCount}")
+                }
+                catch(e: Exception){
+                    println(e.toString())
+                }
+            }
 
         }
 

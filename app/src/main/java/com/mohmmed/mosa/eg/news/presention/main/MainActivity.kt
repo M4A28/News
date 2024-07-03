@@ -1,4 +1,4 @@
-package com.mohmmed.mosa.eg.news.main
+package com.mohmmed.mosa.eg.news.presention.main
 
 import android.os.Bundle
 import android.util.Log
@@ -20,13 +20,11 @@ import javax.inject.Inject
 class MainActivity : ComponentActivity() {
 
     val viewModel by viewModels<MainViewModel>()
-    @Inject
-    lateinit var newsDao: NewsDAO
-    @OptIn(ExperimentalFoundationApi::class)
+//    @Inject
+//    lateinit var newsDao: NewsDAO
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
-        Log.d("Date", prettyTime(stringToDate("2024-06-19T12:55:30Z")))
         installSplashScreen().apply {
             setKeepOnScreenCondition{
                 viewModel.splashCondition

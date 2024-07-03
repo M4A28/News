@@ -1,4 +1,4 @@
-package com.mohmmed.mosa.eg.news.main
+package com.mohmmed.mosa.eg.news.presention.main
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

@@ -19,12 +19,15 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.sp
 import androidx.paging.compose.LazyPagingItems
 import com.mohmmed.mosa.eg.news.R
+import com.mohmmed.mosa.eg.news.domain.connectivity.ConnectionState
 import com.mohmmed.mosa.eg.news.domain.module.news.Article
 import com.mohmmed.mosa.eg.news.presention.Dimens.MediumPadding0
 import com.mohmmed.mosa.eg.news.presention.Dimens.MediumPadding1
 import com.mohmmed.mosa.eg.news.presention.common.ArticleList
+import com.mohmmed.mosa.eg.news.presention.common.ConnectivityStatus
 import com.mohmmed.mosa.eg.news.presention.common.SearchBar
-import com.mohmmed.mosa.eg.news.util.Constant.NEWS_PAGE_SIZE
+import com.mohmmed.mosa.eg.news.presention.common.connectivityState
+import com.mohmmed.mosa.eg.news.util.Constant.PAGE_SIZE
 
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -35,11 +38,12 @@ fun HomeScreen(
     navigateToSearch: () -> Unit
 ) {
 
+    val connection by connectivityState()
     val titles by remember {
         derivedStateOf {
-            if (articles.itemCount > NEWS_PAGE_SIZE) {
+            if (articles.itemCount > PAGE_SIZE) {
                 articles.itemSnapshotList.items
-                    .slice(IntRange(start = 0, endInclusive = NEWS_PAGE_SIZE - 1))
+                    .slice(IntRange(start = 0, endInclusive = PAGE_SIZE - 1))
                     .joinToString(separator = " \uD83D\uDFE5 ") { it.title }
             } else {
                 ""
@@ -47,15 +51,14 @@ fun HomeScreen(
         }
     }
 
+
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = MediumPadding1)
+            //.padding(top = MediumPadding1)
             .statusBarsPadding()
     ) {
-
-        // Spacer(modifier = Modifier.height(MediumPadding1))
-
+        ConnectivityStatus(connection === ConnectionState.Available)
         SearchBar(
             modifier = Modifier
                 .padding(horizontal = MediumPadding1)

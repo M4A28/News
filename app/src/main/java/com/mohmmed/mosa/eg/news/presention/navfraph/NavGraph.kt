@@ -35,7 +35,6 @@ fun NavGraph(
             }
         }
 
-        //
         navigation(
             route = Route.NewsNavigation.rout,
             startDestination = Route.NewsNavigationScreen.rout

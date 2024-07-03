@@ -9,7 +9,7 @@ import com.mohmmed.mosa.eg.news.data.remote.news.NewsPagingSource
 import com.mohmmed.mosa.eg.news.data.remote.news.SearchNewsPagingSource
 import com.mohmmed.mosa.eg.news.domain.module.news.Article
 import com.mohmmed.mosa.eg.news.domain.reposotry.NewsRepository
-import com.mohmmed.mosa.eg.news.util.Constant.NEWS_PAGE_SIZE
+import com.mohmmed.mosa.eg.news.util.Constant.PAGE_SIZE
 import kotlinx.coroutines.flow.Flow
 
 class NewsRepositoryImp(
@@ -19,7 +19,7 @@ class NewsRepositoryImp(
     NewsRepository{
     override fun getNews(sources: List<String>): Flow<PagingData<Article>> {
         return Pager(
-            config = PagingConfig(pageSize = NEWS_PAGE_SIZE),
+            config = PagingConfig(pageSize = PAGE_SIZE),
             pagingSourceFactory = {
                 NewsPagingSource(
                     newsApi = newsApi,
@@ -31,7 +31,7 @@ class NewsRepositoryImp(
 
     override fun searchNews(searchQuery: String, sources: List<String>): Flow<PagingData<Article>> {
         return Pager(
-            config = PagingConfig(pageSize = NEWS_PAGE_SIZE),
+            config = PagingConfig(pageSize = PAGE_SIZE),
             pagingSourceFactory = {
                 SearchNewsPagingSource(
                     searchQuery = searchQuery,

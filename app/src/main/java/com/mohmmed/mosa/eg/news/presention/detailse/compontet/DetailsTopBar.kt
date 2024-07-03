@@ -21,6 +21,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.mohmmed.mosa.eg.news.R
 import com.mohmmed.mosa.eg.news.presention.detailse.DetailsScreen
 import com.mohmmed.mosa.eg.news.ui.theme.NewsTheme
+import com.mohmmed.mosa.eg.news.ui.theme.PrimaryVariantColor
+import com.mohmmed.mosa.eg.news.ui.theme.SecondaryColor
+import com.mohmmed.mosa.eg.news.ui.theme.SecondaryVariantColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -33,9 +36,9 @@ fun DetailsTopBar(
     TopAppBar(modifier = Modifier.fillMaxWidth(),
         title = { stringResource(R.string.details) },
         colors = TopAppBarDefaults.mediumTopAppBarColors(
-            containerColor = Color.Transparent,
-            actionIconContentColor = colorResource(id = R.color.body),
-            navigationIconContentColor = colorResource(id = R.color.body),
+            containerColor = PrimaryVariantColor,
+            actionIconContentColor = SecondaryColor,
+            navigationIconContentColor = SecondaryColor,
         ),
         navigationIcon = {
             IconButton(onClick = onBackClick ) {

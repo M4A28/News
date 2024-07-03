@@ -3,6 +3,8 @@
     <string name="app_name">الاخبار</string>
     <string name="bookmark">المفضلة</string>
     <string name="search">بحث</string>
+    <string name="crypto">العملات</string>
+
     <string name="next">التالي</string>
     <string name="back">السابق</string>
     <string name="get_start">انطلق</string>
@@ -19,6 +21,7 @@
     <string name="news_not_saved">لم تقم بحفظ اي مقالات حتى الان</string>
     <string name="server_unavailable">خطاء من السيرفير</string>
     <string name="internet_unavailable">الانترنت غير متوفر</string>
+    <string name="internet_available">توفر الانترنت</string>
     <string name="unknown_error">خطاء مجهول</string>
     <string name="home">الرئيسية</string>
     <string name="article_deleted">تمت الازالة من المفضلة</string>

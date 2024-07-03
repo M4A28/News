@@ -30,6 +30,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
@@ -112,20 +113,8 @@ dependencies {
     implementation("androidx.work:work-gcm:$work_version")
     // optional - Multiprocess support
     implementation ("androidx.work:work-multiprocess:$work_version")
-
-//    val voyagerVersion = "1.1.0-beta01"
-//    // Navigator
-//    implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
-//    // Screen Model
-//    implementation("cafe.adriel.voyager:voyager-screenmodel:$voyagerVersion")
-//    // BottomSheetNavigator
-//    implementation("cafe.adriel.voyager:voyager-bottom-sheet-navigator:$voyagerVersion")
-//    // TabNavigator
-//    implementation("cafe.adriel.voyager:voyager-tab-navigator:$voyagerVersion")
-//    // live data
-//    implementation("cafe.adriel.voyager:voyager-livedata:$voyagerVersion")
-//    // Transitions`
-//    implementation("cafe.adriel.voyager:voyager-transitions:$voyagerVersion")
+    // window size class
+    implementation("androidx.compose.material3:material3-window-size-class:1.1.0")
     // gson
     implementation("com.google.code.gson:gson:2.10.1")
     // navigation-compose
@@ -133,7 +122,7 @@ dependencies {
     // retrofit2
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
-    // pertty time
+    // pretty time
     implementation("org.ocpsoft.prettytime:prettytime:5.0.4.Final")
     // to show fake data eg: name, emil
     implementation("com.github.javafaker:javafaker:1.0.2")

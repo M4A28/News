@@ -8,12 +8,16 @@ import com.mohmmed.mosa.eg.news.data.local.NewsTypeConverter
 import com.mohmmed.mosa.eg.news.data.manger.LocalUserMangerImpl
 import com.mohmmed.mosa.eg.news.data.remote.crypto.CryptoApi
 import com.mohmmed.mosa.eg.news.data.remote.news.NewsApi
+import com.mohmmed.mosa.eg.news.data.reposotry.CryptoRepositoryImp
 import com.mohmmed.mosa.eg.news.data.reposotry.NewsRepositoryImp
 import com.mohmmed.mosa.eg.news.domain.manger.LocalUserManger
+import com.mohmmed.mosa.eg.news.domain.reposotry.CryptoRepository
 import com.mohmmed.mosa.eg.news.domain.reposotry.NewsRepository
 import com.mohmmed.mosa.eg.news.domain.usecase.app_entry.AppEntryUseCases
 import com.mohmmed.mosa.eg.news.domain.usecase.app_entry.ReadAppEntry
 import com.mohmmed.mosa.eg.news.domain.usecase.app_entry.SaveAppEntry
+import com.mohmmed.mosa.eg.news.domain.usecase.crypto.CryptoUseCases
+import com.mohmmed.mosa.eg.news.domain.usecase.crypto.GetCoins
 import com.mohmmed.mosa.eg.news.domain.usecase.news.DeleteArticle
 import com.mohmmed.mosa.eg.news.domain.usecase.news.GetNews
 import com.mohmmed.mosa.eg.news.domain.usecase.news.NewsUseCases
@@ -71,6 +75,21 @@ object AppModule {
             .build()
             .create(CryptoApi::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun provideCryptoRepository(
+        cryptoApi: CryptoApi
+    ): CryptoRepository = CryptoRepositoryImp(cryptoApi)
+
+    @Provides
+    @Singleton
+    fun provideCryptoUseCases(
+        cryptoRepository: CryptoRepository
+    ): CryptoUseCases{
+        return CryptoUseCases(getCoins = GetCoins(cryptoRepository))
+    }
+
 
     @Provides
     @Singleton

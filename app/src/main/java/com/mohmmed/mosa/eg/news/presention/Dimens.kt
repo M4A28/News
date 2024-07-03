@@ -3,8 +3,10 @@ package com.mohmmed.mosa.eg.news.presention
 import androidx.compose.ui.unit.dp
 
 object Dimens {
+    val SmallPadding = 10.dp
     val MediumPadding0 = 12.dp
     val MediumPadding1 = 24.dp
+    val MediumPadding3 = 16.dp
     val MediumPadding2 = 30.dp
     val ExtraSmallPadding = 3.dp
     val ExtraSmallPadding2 = 6.dp

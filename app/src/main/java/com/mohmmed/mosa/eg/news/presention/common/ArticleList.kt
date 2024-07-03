@@ -89,7 +89,7 @@ fun handelPagingResult(
 @Composable
 fun LoadingArticleList() {
     Column(verticalArrangement = Arrangement.spacedBy(MediumPadding1)) {
-        repeat(5){
+        repeat(10){
             AnimatedArticleCardLoading(modifier = Modifier.padding(MediumPadding1))
         }
 

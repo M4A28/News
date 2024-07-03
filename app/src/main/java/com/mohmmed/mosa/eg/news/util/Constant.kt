@@ -7,25 +7,28 @@ object Constant {
     const val NEWS_BASE_URL = "https://newsapi.org/v2/"
     const val CRYPTO_BASE_URL = "https://api.coinlore.net/"
     const val NEWS_DB = "news_db"
-    const val NEWS_PAGE_SIZE = 20
+    const val PAGE_SIZE = 20
     const val ARTICLE_KEY = "Article"
     const val DEFAULT_DATE_PATTERN = "yyyy-MM-dd'T'HH:mm:ss'Z'"
     val NEWS_SOURCES_ONE = listOf(
-        "bbc-news",
         "abc-news",
         "al-jazeera",
         "al-jazeera-english",
-        "associated-press",
-        "cnn",
         "argaam",
+        "associated-press",
+        "bbc-news",
         "bloomberg",
         "business-insider",
         "cbc-news",
+        "cnn",
         "crypto-coins-news",
         "engadget",
+        "fox-news",
+        "google-news",
         "google-news-sa",
         "hacker-news",
         "independent",
+        "mashable",
         "medical-news-today",
         "msnbc",
         "national-geographic",
@@ -34,10 +37,7 @@ object Constant {
         "reddit-r-all",
         "sabq",
         "techradar",
-        "time",
-        "fox-news",
-        "google-news",
-        "mashable",
         "the-verge",
+        "time",
     )
 }
